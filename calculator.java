@@ -12,13 +12,13 @@ public class calculator{
 
         int num = scanner.nextInt();
 
-        if(num>4){
+        if(num<=5){
             System.out.println("Enter the first number");
             int a = scanner.nextInt();
             System.out.println("Enter the second number");
             int b = scanner.nextInt();
             
-            switch(No){
+            switch(num){
                 case 1: 
                     int sum = a+b;
                     System.out.println(sum);
@@ -42,6 +42,7 @@ public class calculator{
                 case 5:
                     break;
             }
+        }
         else{
                 System.out.println("Invalid Input");
 
@@ -55,5 +56,5 @@ public class calculator{
         
 
     }
-}
+
 
