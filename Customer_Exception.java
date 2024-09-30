@@ -8,11 +8,11 @@ class InvalidAmountException extends Exception{
             super(message);
         }
     }
-class InsufficientFundsException extends Exception(){
+class InsufficientFundsException extends Exception{
     public InsufficientFundsException(){
         super();
     }
-        public InsufficientFundsException(message){
+        public InsufficientFundsException(String message){
             super(message);
         }
 
@@ -25,7 +25,7 @@ public class Customer_Exception{
         int[] amount = new int[25];
         String[] Names = new String[25];
         Scanner scan = new Scanner(System.in);
-        sjcet1 e = new sjcet1();
+        Customer_Exception e = new Customer_Exception();
 
         System.out.print("Enter No. of Customers: ");
         n = scan.nextInt();
@@ -49,7 +49,7 @@ public class Customer_Exception{
                     e.search(n,Names,accNumber,amount);
                     break;
                 case 3:
-                    e.deposite(n,accNumber, amount);
+                    e.deposit(n,accNumber, amount);
                     break;
                 case 4:
                     e.withdraw(n, accNumber, amount);
@@ -88,7 +88,7 @@ public class Customer_Exception{
         int acno, flag =0, pos = 0;
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter Account Number: ");
-        acno = scan.NextInt();
+        acno = scan.nextInt();
         for(int i =0; i<n; i++){
             if(accNumber[i] == acno){
                 flag = 1;
@@ -97,7 +97,7 @@ public class Customer_Exception{
             }
         }
         if(flag == 1){
-            System.out.print("Account Name: " + Name[pos] + "-> Account Number: " + accNumber[pos] + "-> Account Balance: "+ acmount[pos] + "\n");
+            System.out.print("Account Name: " + Name[pos] + "-> Account Number: " + accNumber[pos] + "-> Account Balance: "+ amount[pos] + "\n");
         }
         else{
             System.out.printn("Account not found");
@@ -163,7 +163,7 @@ public class Customer_Exception{
                     System.out.println(e);
 
                 }
-                catch(InsufficientFundsException){
+                catch(InsufficientFundsException e){
                     System.out.println(e);
                 }
                 break;
