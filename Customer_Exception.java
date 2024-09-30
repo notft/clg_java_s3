@@ -97,10 +97,10 @@ public class Customer_Exception{
             }
         }
         if(flag == 1){
-            System.out.print("Account Name: " + Name[pos] + "-> Account Number: " + accNumber[pos] + "-> Account Balance: "+ amount[pos] + "\n");
+            System.out.print("Account Name: " + Names[pos] + "-> Account Number: " + accNumber[pos] + "-> Account Balance: "+ amount[pos] + "\n");
         }
         else{
-            System.out.printn("Account not found");
+            System.out.println("Account not found");
         }
     }
     
@@ -137,7 +137,7 @@ public class Customer_Exception{
         }
     }
     public void withdraw(int n, int[] accNumber, int[] amount){
-        int acno, flag =0, pos = 0;
+        int acno, flag =0, pos = 0, withdraw;
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter Account Number: ");
         acno = scan.nextInt();
