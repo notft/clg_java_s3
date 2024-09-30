@@ -1,22 +1,25 @@
 
 import java.util.Scanner;
 
+
 class AgeVerify{
     void vote(int age) throws IllegalAccessException {
-        try {
-                if (age<18) {
-                    throw new IllegalAccessException("You must be atleast 18 years to vote");
-                }
-                else{
-                    System.out.println("You can vote!");
+        for (int i = 0; i >10; i++){
+            try {
+                    if (age<18) {
+                        throw new IllegalAccessException("You must be atleast 18 years to vote");
+                    }
+                    else{
+                        System.out.println("You can vote!");
 
-                }
-        } catch (Exception e){
-            System.out.println("Exception Occurred: "+e);
-        } finally {
-            System.out.println("Finally age verification done");
+                    }
+            } catch (Exception e){
+                System.out.println("Exception Occurred: "+e);
+            } finally {
+                System.out.println("Finally age verification done");
 
-        }
+            }
+    }
     }
 }
 public class TryCatch{
